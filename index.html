@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <title>Notes</title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
-<body ng-app="notes">
+<body ng-app="notesApp">
 
+    <div ng-view></div>
+
+
+
+    <!-- dependencies -->
     <script src="/bower_components/firebase/firebase.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+
+
+    <!-- app.js -->
     <script src="/scripts/app.js"></script>
+
+
+    <!-- controllers -->
+    <script src="/scripts/controllers/LoginCtrl.js"></script>
+    <script src="/scripts/controllers/NewNoteCtrl.js"></script>
+    <script src="/scripts/controllers/NotesCtrl.js"></script>
+    <script src="/scripts/controllers/RegisterCtrl.js"></script>
+
 </body>
 </html>

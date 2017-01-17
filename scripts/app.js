@@ -8,30 +8,30 @@ messagingSenderId: "79812579627"
 };
 firebase.initializeApp(config);
 
-let app = angular.module('notesApp', ['ngRoute']);
+const app = angular.module('notesApp', ['ngRoute']);
 
 // set up 4 routes: `/register`, `/login`, `/notes`, `/new`
 app.config(function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
 
-    $routeProvider.
-        when('/register', {
-            controller: 'RegisterCtrl',
-            templateUrl: 'partials/registration.html'
-        })
-        when('/login', {
+    $routeProvider
+        .when('/login', {
             controller: 'LoginCtrl',
             templateUrl: 'partials/login.html'
         })
-        when('/notes', {
+        .when('/register', {
+            controller: 'RegisterCtrl',
+            templateUrl: 'partials/registration.html'
+        })
+        .when('/notes', {
             controller: 'NotesCtrl',
             templateUrl: 'partials/noteList.html'
         })
-        when('/new', {
+        .when('/new', {
             controller: 'NewNoteCtrl',
             templateUrl: 'partials/newNote.html'
         })
-        otherwise({
-            redirectTo: '/register'
+        .otherwise({
+            redirectTo: '/login'
         })
-}
+})
