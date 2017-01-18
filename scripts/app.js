@@ -1,3 +1,5 @@
+const app = angular.module('notesApp', ['ngRoute']);
+
 // Initialize Firebase
 var config = {
 apiKey: "AIzaSyCluQz_okGKN8WJ3uxB7vgI9OgzhyNARRA",
@@ -7,31 +9,3 @@ storageBucket: "mf-user-notes.appspot.com",
 messagingSenderId: "79812579627"
 };
 firebase.initializeApp(config);
-
-const app = angular.module('notesApp', ['ngRoute']);
-
-// set up 4 routes: `/register`, `/login`, `/notes`, `/new`
-app.config(function($routeProvider, $locationProvider) {
-    $locationProvider.hashPrefix('');
-
-    $routeProvider
-        .when('/login', {
-            controller: 'LoginCtrl',
-            templateUrl: 'partials/login.html'
-        })
-        .when('/register', {
-            controller: 'RegisterCtrl',
-            templateUrl: 'partials/registration.html'
-        })
-        .when('/notes', {
-            controller: 'NotesCtrl',
-            templateUrl: 'partials/noteList.html'
-        })
-        .when('/new', {
-            controller: 'NewNoteCtrl',
-            templateUrl: 'partials/newNote.html'
-        })
-        .otherwise({
-            redirectTo: '/login'
-        })
-})
