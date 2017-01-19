@@ -1,6 +1,6 @@
 app.factory('getFirebaseDataFactory', function($http) {
     return {
-        getList: () => {
+        getData: () => {
             return $http.get('https://mf-user-notes.firebaseio.com/.json')
                 .then((val) => {
                     console.log('val', val)
