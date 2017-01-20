@@ -3,13 +3,9 @@ app.config(function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
 
     $routeProvider
-        .when('/login', {
-            controller: 'LoginCtrl',
-            templateUrl: 'partials/login.html'
-        })
-        .when('/register', {
-            controller: 'RegisterCtrl',
-            templateUrl: 'partials/registration.html'
+        .when('/home', {
+            controller: 'HomeCtrl',
+            templateUrl: 'partials/home.html'
         })
         .when('/notes', {
             controller: 'NotesCtrl',
@@ -19,9 +15,13 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'NewNoteCtrl',
             templateUrl: 'partials/newNote.html'
         })
-        .when('/home', {
-            controller: 'HomeCtrl',
-            templateUrl: 'partials/home.html'
+        .when('/login', {
+            controller: 'LoginCtrl',
+            templateUrl: 'partials/login.html'
+        })
+        .when('/register', {
+            controller: 'RegisterCtrl',
+            templateUrl: 'partials/registration.html'
         })
         .otherwise({
             redirectTo: '/home'

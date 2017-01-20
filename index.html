@@ -8,35 +8,10 @@
 </head>
 <body ng-app="notesApp">
     <nav ng-controller="NavbarCtrl" class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a class="navbar-brand" href="#">noted</a></li>
-            <li><a href="#">Notes</a></li>
-            <li><a href="#">New Note</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        <ng-include src="'partials/nav.html'"></ng-include>
     </nav>
 
     <div ng-view></div>
-
 
     <!-- dependencies -->
     <script src="/bower_components/firebase/firebase.js"></script>
@@ -44,7 +19,6 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
 
     <!-- app.js -->
     <script src="/scripts/app.js"></script>
@@ -61,6 +35,7 @@
     <script src="/scripts/controllers/NewNoteCtrl.js"></script>
     <script src="/scripts/controllers/NotesCtrl.js"></script>
     <script src="/scripts/controllers/RegisterCtrl.js"></script>
+    <script src="/scripts/controllers/NavbarCtrl.js"></script>
 
 </body>
 </html>
