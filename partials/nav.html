@@ -12,20 +12,24 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li ng-class="{ active:'{{currentTab}}===/home'}">
-        <a ng-click="selectedTab('/home')" class="navbar-brand" href="#/home">noted</a>
+      <li ng-class="{ active: isCurrentTab('/home') }">
+        <a class="navbar-brand" href="#/home">Noted</a>
       </li>
-      <li ng-class="{ active:'{{currentTab}}===/notes'}">
-        <a ng-click="selectedTab('/notes')" href="#/notes">Notes</a>
+      <li ng-class="{ active: isCurrentTab('/notes') }">
+        <a href="#/notes">Notes</a>
       </li>
-      <li ng-class="{ active:'{{currentTab}}===/new'}">
-        <a ng-click="selectedTab('/new')" href="#/new">New Note</a>
+      <li ng-class="{ active: isCurrentTab('/new') }">
+        <a href="#/new">New Note</a>
       </li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li ng-class="{ active: '{{currentTab}} === /login'}"><a href="#/login">Login</a></li>
-      <li ng-class="{ active: '{{currentTab}} === /register'}"><a href="#/register">Register</a></li>
+      <li ng-class="{ active: isCurrentTab('/login')}">
+        <a href="#/login">Login</a>
+      </li>
+      <li ng-class="{ active: isCurrentTab('/register')}">
+        <a href="#/register">Register</a>
+      </li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
