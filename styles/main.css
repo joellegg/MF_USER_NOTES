@@ -1,0 +1,6 @@
+.bordered {
+  border: 1px solid black;
+}
+#messageDelete {
+  margin: 0.5em auto;
+}
