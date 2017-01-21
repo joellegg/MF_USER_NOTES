@@ -1,17 +1,15 @@
 app.controller('NotesCtrl', function($scope, firebaseFactory) {
-    //console.log('notes list controller');
     firebaseFactory.getData().then(function(val) {
       $scope.messages = val.data;
       // console.log('val', val.data);
     });
 
-    $scope.removeMessage = function(key) {
+    // remove message from firebase and from the DOM
+    $scope.removeMessage = function(key, value) {
       let url = 'https://mf-user-notes.firebaseio.com/' + key + '.json';
-      console.log(url);
-      firebaseFactory.deleteMessage(url);
+      //firebaseFactory.deleteMessage(url);
 
+      console.log(value);
+      // value.splice()
     }
-    // $scope.deleteMessage = function(key) {
-    //   console.log('key', key)
-    // }
 })

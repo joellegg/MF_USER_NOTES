@@ -4,3 +4,9 @@
 #messageDelete {
   margin: 0.5em auto;
 }
+.ng-invalid.ng-dirty {
+ border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+ border-color: #78FA89;
+}

@@ -3,13 +3,11 @@ app.factory('firebaseFactory', function($http) {
     getData: () => {
       return $http.get('https://mf-user-notes.firebaseio.com/.json');
     },
-    postData: function(newNote) {
+    postData: (newNote) => {
       return $http.post('https://mf-user-notes.firebaseio.com/.json', newNote);
     },
-    deleteMessage: function(url) {
-      //let url = 'https://mf-user-notes.firebaseio.com/' + key + '.json'
-      //console.log('key', key)
-      return $http.delete(url)
+    deleteMessage: (url) => {
+      return $http.delete(url);
     }
   }
 })
