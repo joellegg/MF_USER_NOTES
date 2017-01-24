@@ -1,0 +1,26 @@
+<!-- New Note -->
+<!-- ++++++++ -->
+<div class="container col-sm-6 col-sm-offset-3 col-xs-12">
+  <form name="newlyNoted" ng-submit="newlyNoted.$valid && addNote(newNote)" novalidate>
+
+    <div class="form-group"> <!-- Title field -->
+      <label class="control-label " for="name">Title</label>
+      <input ng-model="newNote.title" class="form-control" id="name" name="name" type="text" required/>
+    </div>
+
+    <div class="form-group"> <!-- Subject field -->
+      <label class="control-label " for="subject">Subject</label>
+      <input ng-model="newNote.subject" class="form-control" id="subject" name="subject" type="text" required/>
+    </div>
+
+    <div class="form-group"> <!-- Message field -->
+      <label class="control-label " for="message">Message</label>
+      <textarea ng-model="newNote.message" class="form-control" cols="40" id="message" name="message" rows="10" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+    </div>
+
+  </form>
+</div>

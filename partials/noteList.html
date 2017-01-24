@@ -1,0 +1,16 @@
+<div class="container">
+  <h1> Notes List </h1>
+  <div class="row bordered">
+    <h4 class="col-sm-2">Title</h4>
+    <h4 class="col-sm-2">Subject</h4>
+    <h4 class="col-sm-8">Message</h4>
+  </div>
+
+  <div class="row bordered" ng-repeat="(key, value) in messages">
+    <h4 class="col-sm-2">{{value.title}}</h4>
+    <h4 class="col-sm-2">{{value.subject}}</h4>
+    <h4 class="col-sm-7">{{value.message}}</h4>
+    <button class="col-sm-0.9 btn btn-danger" id="messageDelete" ng-click="removeMessage(key, value)">Delete</button>
+  </div>
+
+</div>
